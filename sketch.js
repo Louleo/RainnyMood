@@ -7,11 +7,11 @@ function preload(){
   }
   for (var i = 1; i <= 1; i++) {
     images.push(i);
-    images[i-1] = loadImage(i.toString()+'.jpg');
+    images[i-1] = loadImage('imgs/'+i.toString()+'.jpg');
   }
   var choice = random(sound_file_choices)
   this_sound_file = choice.toString();
-  rainSound = loadSound(this_sound_file+'.mp3');
+  rainSound = loadSound('mp3s/'+this_sound_file+'.mp3');
 }
 
 function setup(){
@@ -29,7 +29,7 @@ function setup(){
 					], 100);
   };
   image.crossOrigin = 'anonymous';
-  image.src = '1.jpg';
+  image.src = 'imgs/1.jpg';
   rainSound.loop();
 }
 
