@@ -20,12 +20,12 @@ function setup(){
   image.onload = function () {
     var engine = new RainyDay({
       image: this,
-      fps : 36
+      fps : 24
     });
     engine.rain([
 						[0, 2, 200],
-						[3, 5, 10]
-					], 100);
+						[2, 4, 10]
+					]);
   };
   image.crossOrigin = 'anonymous';
   var choice = random(images);
