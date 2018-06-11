@@ -2,14 +2,13 @@ var this_sound_file;
 var images = [];
 function preload(){
   var sound_file_choices = [];
-  for (var i = 1; i <= 2; i++) {
+  for (var i = 1; i <= 10; i++) {
     sound_file_choices.push(i);
   }
-  for (var i = 1; i <= 1; i++) {
+  for (var i = 1; i <= 9; i++) {
     images.push(i);
-    images[i-1] = loadImage('imgs/'+i.toString()+'.jpg');
   }
-  var choice = random(sound_file_choices)
+  var choice = random(sound_file_choices);
   this_sound_file = choice.toString();
   rainSound = loadSound('mp3s/'+this_sound_file+'.mp3');
 }
@@ -29,7 +28,8 @@ function setup(){
 					], 100);
   };
   image.crossOrigin = 'anonymous';
-  image.src = 'imgs/1.jpg';
+  var choice = random(images);
+  image.src = 'imgs/'+choice.toString()+'.jpg';
   rainSound.loop();
 }
 
