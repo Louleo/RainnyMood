@@ -24,6 +24,7 @@ function setup(){
   frameRate(60);
   createCanvas(windowWidth, windowHeight);
   ad = document.getElementById("advertise");
+  ad.innerHTML += '澳洲代购 就找齐霁';
   console.log(windowWidth/20);
   ad.style.fontSize = (windowWidth/21).toString();
   x = windowWidth/2;
