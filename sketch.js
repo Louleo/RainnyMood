@@ -7,6 +7,7 @@ var y;
 var tops,bot,left,right;
 var addORsub,sp,sz;
 var ad;
+var mb;
 function preload(){
   var sound_file_choices = [];
   for (var i = 1; i <= 10; i++) {
@@ -23,9 +24,10 @@ function preload(){
 function setup(){
   frameRate(60);
   createCanvas(windowWidth, windowHeight);
+  mb = document.getElementById("main");
+  mb.innerHTML += "<img id='background' alt='background' class ='imgbg' src='' />";
   ad = document.getElementById("advertise");
   ad.innerHTML += '澳洲代购 就找齐霁';
-  console.log(windowWidth/20);
   ad.style.fontSize = (windowWidth/21).toString();
   x = windowWidth/2;
   y = windowHeight/4;
